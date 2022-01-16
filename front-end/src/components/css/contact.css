@@ -79,6 +79,7 @@ form {
   border: none;
   font-family: "Raleway";
   color: inherit;
+  cursor: pointer;
 }
 @media only screen and (max-width: 800px) {
   .form-button {
@@ -91,6 +92,7 @@ textarea {
   border: none;
   position: relative;
   font-family: inherit;
+  resize: none;
 }
 textarea:focus {
   outline: none;

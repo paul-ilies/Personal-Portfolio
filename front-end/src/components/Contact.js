@@ -20,6 +20,12 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (subject === "" || senter === "" || email === "" || company === "" || message === "") {
+            alert("Please fill entire form fields,\nbefore push the button")
+            return false
+        }
+
+
         await axios({
             method: "POST",
             url: "http://localhost:5000/send",
@@ -31,10 +37,10 @@ const Contact = () => {
                 message
             }
         }).then((response) => {
-            console.log(response)
+
             if (response.data.msg === 'success') {
                 resetData()
-                alert("Message Sent.");
+                alert("Contact Form Sent!");
 
             } else if (response.data.msg === 'fail') {
                 alert("Message failed to send.")
