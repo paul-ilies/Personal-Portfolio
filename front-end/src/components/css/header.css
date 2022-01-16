@@ -1,0 +1,72 @@
+.navbar {
+  background-color: transparent;
+  padding: 0 1em;
+}
+
+.navbar-list {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 5%;
+}
+
+.navbar-item {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+
+.navbar-item.active {
+  /* background-color: var(--dark-red); */
+  padding: 1em;
+}
+/* animation hover links */
+.navbar-list > li + li::before,
+.navbar-list > li + li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 110%;
+  margin-top: -0.5px;
+  background: var(--dark-red);
+}
+
+.navbar-list > li + li:before {
+  left: -2.5px;
+}
+.navbar-list > li + li:after {
+  right: 2.5px;
+  background: var(--dark-red);
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.navbar-list > li + li:hover:before {
+  background: var(--dark-red);
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.navbar-list > li + li:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+/* end animation hover text */
+
+.left-item {
+  margin-right: auto;
+  font-family: "Pacifico";
+  font-size: 1.5em;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}

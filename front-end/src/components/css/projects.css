@@ -1,0 +1,99 @@
+.portfolio {
+  height: auto;
+  padding: 0 1em;
+}
+
+.portfolio header h1::after {
+  content: "";
+  display: inline-block;
+  border: 0.5px #ff0513 solid;
+  margin-left: 1em;
+  width: 10em;
+}
+.projects {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.projects article {
+  margin: 2em 0;
+  display: flex;
+  position: relative;
+}
+
+.projects article::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: -2em;
+  border: 0.5px #ff0513 solid;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 800px) {
+  .projects article {
+    flex-direction: column;
+  }
+}
+.project-description {
+  flex: 1;
+  font-family: "Raleway";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-description h2 {
+  font-size: 2em;
+  text-align: center;
+}
+.project-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-card img {
+  max-width: 70%;
+  height: auto;
+  border: 2px solid rgba(253, 253, 253, 0.2);
+  padding: 2em;
+}
+
+.project-description p {
+  text-align: center;
+  line-height: 2em;
+}
+
+.project-techs ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.project-techs ul > li + li {
+  margin-left: 1.5em;
+}
+.project-techs ul > li {
+  border: 3px solid rgba(253, 253, 253, 0.2);
+  margin-left: 1.5em;
+  padding: 1em;
+}
+.project-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0;
+  gap: 3em;
+}
+.project-links a {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255, 5, 19, 0.5);
+  padding: 0.5em;
+}

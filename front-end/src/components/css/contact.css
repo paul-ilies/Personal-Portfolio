@@ -1,0 +1,106 @@
+.contact {
+  margin-top: 1em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 800px) {
+  .contact {
+    height: auto;
+  }
+}
+.contact-header {
+  text-align: center;
+  max-width: 50%;
+}
+.contact-header p {
+  line-height: 2em;
+}
+.contact-header::before {
+  content: "";
+  display: block;
+  border: 0.5px #ff0513 solid;
+  max-width: 10em;
+  height: 1px;
+  margin: 0 auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: stretch;
+  gap: 2em;
+}
+@media only screen and (max-width: 800px) {
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+}
+.inputs > input {
+  width: 25em;
+  height: 3.5em;
+  position: relative;
+  font-family: inherit;
+  border: none;
+}
+.inputs > input:focus {
+  outline: none;
+}
+@media only screen and (max-width: 400px) {
+  .inputs > input {
+    width: 20em;
+  }
+}
+
+.inputs > input::placeholder {
+  color: #707070;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-5%, -50%);
+}
+.inputs > input:focus::placeholder {
+  opacity: 0;
+}
+
+.form-button {
+  align-self: center;
+  width: 40%;
+  height: 5em;
+  border-radius: 3em;
+  background-color: var(--dark-red);
+  border: none;
+  font-family: "Raleway";
+  color: inherit;
+}
+@media only screen and (max-width: 800px) {
+  .form-button {
+    width: 70%;
+    height: 4em;
+  }
+}
+
+textarea {
+  border: none;
+  position: relative;
+  font-family: inherit;
+}
+textarea:focus {
+  outline: none;
+}
+textarea::placeholder {
+  font-family: "Poppins";
+  position: absolute;
+  top: 10%;
+  left: 2%;
+}
+textarea:focus::placeholder {
+  opacity: 0;
+}

@@ -1,0 +1,137 @@
+.home {
+  height: calc(100vh - 6em);
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+}
+@media only screen and (min-width: 50em) {
+  .home {
+    flex-direction: row;
+  }
+}
+.presentation {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 800px) {
+  .presentation {
+    align-items: center;
+  }
+}
+
+.developer {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 800px) {
+  .developer {
+    align-items: center;
+  }
+}
+.developer-greeting {
+  font-family: "Poppins";
+  font-weight: 300;
+  margin: 0;
+}
+.developer-name {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 5em;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .developer-name {
+    text-align: center;
+  }
+}
+
+.developer p {
+}
+
+.developer > p span {
+  color: var(--dark-red);
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 800px) {
+  .developer p {
+    font-size: 1.2em;
+  }
+}
+
+.image-cover {
+  flex: 1;
+  background-image: url("../../pictures/profile-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media only screen and (min-width: 50em) {
+  .image-cover {
+    background-image: url("../../pictures/profile.png");
+  }
+}
+
+.social-links h1 {
+  font-family: "Poppins";
+  font-weight: 300;
+}
+.social {
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+@media only screen and (max-width: 800px) {
+  .social {
+    max-width: 100%;
+  }
+}
+
+.social > a > img {
+  width: 3em;
+  height: 3em;
+}
+
+.contact-buttons {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+  max-width: 80%;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-buttons {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contact-buttons > button {
+  width: 35%;
+  height: 3.5em;
+  border-radius: 4em;
+  color: inherit;
+  font-family: "Raleway";
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact-button {
+  background-color: var(--dark-red);
+  border: none;
+}
+.portfolio-button {
+  border: 2px solid rgba(253, 253, 253, 0.2);
+  background-color: transparent;
+}
