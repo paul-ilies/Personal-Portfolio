@@ -51,9 +51,6 @@
   }
 }
 
-.developer p {
-}
-
 .developer > p span {
   color: var(--dark-red);
   font-family: "Poppins";
@@ -100,6 +97,7 @@
 .social > a > img {
   width: 3em;
   height: 3em;
+  cursor: pointer;
 }
 
 .contact-buttons {

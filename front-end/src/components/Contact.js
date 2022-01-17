@@ -54,7 +54,7 @@ const Contact = () => {
 
 
     return (
-        <div className='contact' id="contact">
+        <div className='contact' id="contactForm">
             <div className="contact-header">
                 <h1>Let's Make Something <br /> Great Together</h1>
                 <p>Have a question, or you want to work together?<br />Please fill the form and I will respond as soon as possible!</p>

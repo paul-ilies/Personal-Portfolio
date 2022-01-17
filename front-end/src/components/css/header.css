@@ -17,7 +17,6 @@
   align-self: stretch;
   display: flex;
   align-items: center;
-  visibility: hidden;
 }
 
 .navbar-item.active {
