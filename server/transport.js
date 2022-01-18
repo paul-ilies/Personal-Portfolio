@@ -1,7 +1,9 @@
 const nodemailer = require("nodemailer");
 
 const nodemailerData = (req, res, next) => {
+
     let data = req.body;
+
     let transport = nodemailer.createTransport({
         host: process.env.HOST,
         port: process.env.PORT,
@@ -38,6 +40,7 @@ const nodemailerData = (req, res, next) => {
         }
         else { res.json({ msg: "success" }) }
     })
+
 }
 
 module.exports = { nodemailerData }
