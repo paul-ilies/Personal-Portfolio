@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./css/projects.css"
 import Project from './Project';
-import { projects } from "../source/projects";
+import axios from "axios"
 
 const Projects = () => {
+    const [projects, setProjects] = useState();
+
+    useEffect(() => {
+        const fetchProject = async () => {
+            const data = await axios.get("/projects").then(response => response.data)
+            setProjects(data)
+
+
+        }
+
+        fetchProject()
+    }, [])
+
+
 
     const fetchData = () => {
+        if (!projects) {
+            return
+        }
         return projects.map(el => {
             const { id, image, techList, title, description, gitLink, webLink } = el;
 

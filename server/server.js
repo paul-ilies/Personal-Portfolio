@@ -4,6 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv")
 const path = require("path")
 const { nodemailerData } = require("./transport")
+const { fetchProjects } = require("./projectSeeder")
 const app = express();
 
 //solution for dotenv file not recognized
@@ -21,7 +22,8 @@ app.get("/", (req, res) => {
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
-app.post("/send", nodemailerData)
+app.post("/send", nodemailerData);
+app.get("/projects", fetchProjects)
 
 app.listen(5000, () => {
     console.log("server is running")
