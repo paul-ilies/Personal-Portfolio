@@ -3,12 +3,12 @@
 const projects = [
     {
         id: 1,
-        image: "/pictures/about-mobile.png",
-        techList: ["React", "Html", "Node", "Express"],
-        title: "Project marshal",
-        description: "lorem lorem ipsum made bukfvnejknbj",
-        gitLink: "https://github.com/",
-        webLink: "https://github.com/"
+        image: "/pictures/bakersApp.png",
+        techList: ["React", "Node", "Express", "MongoDB"],
+        title: "Bread Dough Calculator",
+        description: "This project was built under the M.E.R.N. stack for my disertation project.",
+        gitLink: "https://github.com/paul-ilies/Baker-s-Application",
+        webLink: "https://breaddoughcalculator.herokuapp.com/"
 
     },
     {

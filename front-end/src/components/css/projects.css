@@ -47,7 +47,8 @@
   align-items: center;
 }
 .project-description h2 {
-  font-size: 2em;
+  font-size: 1.5em;
+  color: var(--dark-red);
   text-align: center;
 }
 .project-card {

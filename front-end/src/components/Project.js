@@ -15,8 +15,8 @@ const Project = (props) => {
                     </ul>
                 </div>
                 <div className="project-links">
-                    <a href={props.webLink} alt="website link">See Live</a>
-                    <a href={props.gitLink} alt="github link">Source Code</a>
+                    <a href={props.webLink} alt="website link" target="_blank" rel="noopener noreferrer">See Live</a>
+                    <a href={props.gitLink} alt="github link" target="_blank" rel="noopener noreferrer">Source Code</a>
                 </div>
             </div>
             <div className="project-card">
