@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./css/home.css";
 import Buttons from './utils/Buttons';
 import Social from './utils/Social';
@@ -17,7 +17,7 @@ const Home = () => {
         <div className='home' >
             <div className="presentation">
                 <div className="developer">
-                    <h1 className="developer-greeting">Hello,I am</h1>
+                    <h1 className="developer-greeting">Hello, I am</h1>
                     <h1 className="developer-name">Ilies <br />Paul Daniel </h1>
                     <p>A <span>front-end developer</span> who discovered his passion at 35</p>
                 </div>
@@ -39,7 +39,7 @@ const Home = () => {
                     />
                 </div>
             </div>
-            <div className="image-cover"></div>
+
         </div>
     )
 }

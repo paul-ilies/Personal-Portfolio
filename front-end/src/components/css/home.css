@@ -15,6 +15,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 800px) {
@@ -26,6 +27,13 @@
 .developer {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.developer p {
+  text-align: center;
 }
 @media only screen and (max-width: 800px) {
   .developer {
@@ -43,6 +51,7 @@
   font-size: 5em;
   letter-spacing: 0.05em;
   margin: 0;
+  text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
@@ -63,22 +72,16 @@
   }
 }
 
-.image-cover {
-  flex: 1;
-  background-image: url("../../pictures/profile-mobile.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-@media only screen and (min-width: 50em) {
-  .image-cover {
-    background-image: url("../../pictures/profile.png");
-  }
-}
-
 .social-links h1 {
   font-family: "Poppins";
   font-weight: 300;
+}
+.social-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .social {
   max-width: 25%;
@@ -103,8 +106,10 @@
 .contact-buttons {
   margin-top: 1em;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1em;
-  max-width: 80%;
+  width: 100%;
 }
 
 @media only screen and (max-width: 800px) {

@@ -4,7 +4,7 @@ const projects = [
     {
         id: 1,
         image: "/pictures/bakersApp.png",
-        techList: ["React", "Node", "Express", "MongoDB"],
+        techList: ["React", "Bootstrap", "Node", "Express", "MongoDB"],
         title: "Bread Dough Calculator",
         description: "This project was built under the M.E.R.N. stack for my disertation project.",
         gitLink: "https://github.com/paul-ilies/Baker-s-Application",
