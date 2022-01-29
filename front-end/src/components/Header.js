@@ -1,6 +1,6 @@
 import React from 'react';
 import "./css/header.css";
-import resume from "../source/Javascript-The-Definitive-Guide.pdf";
+import resume from "../source/PIlies Resume.pdf";
 
 
 const Header = () => {
