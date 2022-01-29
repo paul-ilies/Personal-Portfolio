@@ -11,7 +11,7 @@ const app = express();
 dotenv.config({ path: path.resolve(__dirname, "./.env") })
 //end solution
 
-console.log(process.env.HOST)
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
