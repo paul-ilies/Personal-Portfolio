@@ -16,14 +16,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get("/", (req, res) => {
-    res.send("Hello World")
-})
+
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
+
+app.use("/", express.static("/front-end/build"))
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "/front-end/build/index.html"))
+})
+
 app.post("/send", nodemailerData);
 app.get("/projects", fetchProjects)
+
+
 
 app.listen(5000, () => {
     console.log("server is running")
