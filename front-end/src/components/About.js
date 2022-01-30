@@ -29,7 +29,7 @@ const About = () => {
 
                 <div className="technologies">
                     <header>
-                        <h2>What i learned so far...</h2>
+                        <h2>What I have learned so far...</h2>
                     </header>
                     <ul>
                         {renderTechs()}
