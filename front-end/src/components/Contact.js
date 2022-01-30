@@ -28,7 +28,7 @@ const Contact = () => {
 
         await axios({
             method: "POST",
-            url: "http://localhost:5000/send",
+            url: "/send",
             data: {
                 senter,
                 subject,
