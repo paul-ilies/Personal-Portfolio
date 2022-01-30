@@ -1,17 +1,20 @@
 const nodemailer = require("nodemailer");
 
-const nodemailerData = (req, res, next) => {
+
+const nodemailerData = async (req, res, next) => {
 
     let data = req.body;
 
     let transport = nodemailer.createTransport({
-        host: process.env.HOST,
-        port: process.env.PORT,
+
+        service: process.env.SERVICE,
         auth: {
             user: process.env.EMAIL,
             pass: process.env.PASS,
-        },
+        }
+
     })
+
 
     transport.verify((error, success) => {
         if (error) {
@@ -34,7 +37,7 @@ const nodemailerData = (req, res, next) => {
         Message: ${data.message}`
     }
 
-    transport.sendMail(mail, (err, data) => {
+    await transport.sendMail(mail, (err, data) => {
         if (err) {
             res.json({ msg: "fail" });
         }

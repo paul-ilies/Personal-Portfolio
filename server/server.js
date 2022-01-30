@@ -26,22 +26,22 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 app.post("/send", nodemailerData);
 app.get("/projects", fetchProjects)
 
-//prepare for deploy
+// //prepare for deploy
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "..", "front-end", "build")));
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "..", "front-end", "build", "index.html"))
-    })
-}
-else {
-    app.get("/", (req, res) => {
-        res.send("API is running")
-    })
-}
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static(path.join(__dirname, "..", "front-end", "build")));
+//     app.get("*", (req, res) => {
+//         res.sendFile(path.join(__dirname, "..", "front-end", "build", "index.html"))
+//     })
+// }
+// else {
+//     app.get("/", (req, res) => {
+//         res.send("API is running")
+//     })
+// }
 
 // end deploy
 
-app.listen(process.env.PORTS || 5000, () => {
+app.listen(5000, () => {
     console.log("server is running")
 })
