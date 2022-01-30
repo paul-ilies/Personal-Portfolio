@@ -1,8 +1,15 @@
 const nodemailer = require("nodemailer");
+const { google } = require("googleapis")
 
 
 const nodemailerData = async (req, res, next) => {
     let data = req.body;
+    const oAuth2Client = new google.auth.OAuth2(
+        process.env.OAUTH_CLIENTID,
+        process.env.CLIENT_SECRET,
+        process.env.REDIRECT_URI
+    )
+    oAuth2Client.setCredentials({ refresh_token: process.env.OAUTH_REFRESH_TOKEN })
 
     let transport = nodemailer.createTransport({
         service: process.env.SERVICE,
