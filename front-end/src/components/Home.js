@@ -7,7 +7,7 @@ const Home = () => {
 
 
     const contactHandler = () => {
-        window.location.hash = "#contact"
+        window.location.hash = "#contactForm"
 
     }
     const portfolioHandler = () => {

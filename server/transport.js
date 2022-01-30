@@ -2,15 +2,16 @@ const nodemailer = require("nodemailer");
 
 
 const nodemailerData = async (req, res, next) => {
-
     let data = req.body;
 
     let transport = nodemailer.createTransport({
-
         service: process.env.SERVICE,
         auth: {
             user: process.env.EMAIL,
             pass: process.env.PASS,
+            clientId: process.env.OAUTH_CLIENTID,
+            clientSecret: process.env.OAUTH_CLIENT_SECRET,
+            refreshToken: process.env.OAUTH_REFRESH_TOKEN
         }
 
     })
