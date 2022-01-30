@@ -7,6 +7,7 @@ const nodemailerData = async (req, res, next) => {
     let transport = nodemailer.createTransport({
         service: process.env.SERVICE,
         auth: {
+            type: 'OAuth2',
             user: process.env.EMAIL,
             pass: process.env.PASS,
             clientId: process.env.OAUTH_CLIENTID,
