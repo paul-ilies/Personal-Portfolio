@@ -6,7 +6,7 @@ const Social = ({ className }) => {
     return (
         <div className={className}>
             <a href="https://github.com/paul-ilies/" target="_blank" rel="noopener noreferrer"><img src={githubLogo} alt="github" /></a>
-            <a href="https://www.linkedin.com/in/iliespauldaniel764a2a144/" target="_blank" rel="noopener noreferrer"><img src={linkedinLogo} alt="github" /></a>
+            <a href="https://www.linkedin.com/in/iliespauldaniel/" target="_blank" rel="noopener noreferrer"><img src={linkedinLogo} alt="github" /></a>
         </div>
     )
 }
