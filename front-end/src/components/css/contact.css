@@ -49,6 +49,7 @@ form {
   position: relative;
   font-family: inherit;
   border: none;
+  padding: 0.8em;
 }
 .inputs > input:focus {
   outline: none;
@@ -93,6 +94,7 @@ textarea {
   position: relative;
   font-family: inherit;
   resize: none;
+  padding: 0.8em;
 }
 textarea:focus {
   outline: none;
