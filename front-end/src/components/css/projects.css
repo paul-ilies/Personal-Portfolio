@@ -3,6 +3,9 @@
   padding: 0 1em;
 }
 
+.portfolio header h1 {
+  font-size: 3em;
+}
 .portfolio header h1::after {
   content: "";
   display: inline-block;

@@ -7,11 +7,12 @@ const Home = () => {
 
 
     const contactHandler = () => {
-        window.location.hash = "#contactForm"
+        document.querySelector("#contactForm").scrollIntoView({ behavior: "smooth" })
 
     }
     const portfolioHandler = () => {
-        window.location.hash = "#portfolio"
+        document.querySelector("#portfolio").scrollIntoView({ behavior: "smooth" })
+
     }
     return (
         <div className='home' >
